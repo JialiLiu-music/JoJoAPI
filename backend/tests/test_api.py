@@ -197,3 +197,44 @@ def test_gateway_stream_completion_records_usage(client: TestClient, monkeypatch
         assert usage_rows[0].cost > 0
     finally:
         db.close()
+
+
+def test_platform_model_prices_and_gateway_models(client: TestClient):
+    token, _ = seed_user(client, "models@example.com")
+    headers = {"Authorization": f"Bearer {token}"}
+    api_key = client.post("/api/v1/api-keys", headers=headers).json()["key"]
+
+    db = fastapi_app.state.testing_session()
+    try:
+        active_price = ModelPrice(
+            provider="vovoapi",
+            model="demo-active",
+            input_token_price="0.01000000",
+            output_token_price="0.02000000",
+            currency="USD",
+            is_active=True,
+        )
+        inactive_price = ModelPrice(
+            provider="vovoapi",
+            model="demo-inactive",
+            input_token_price="0.03000000",
+            output_token_price="0.04000000",
+            currency="USD",
+            is_active=False,
+        )
+        db.add_all([active_price, inactive_price])
+        db.commit()
+    finally:
+        db.close()
+
+    platform_prices = client.get("/api/v1/platform/models")
+    assert platform_prices.status_code == 200
+    assert len(platform_prices.json()) == 1
+    assert platform_prices.json()[0]["model"] == "demo-active"
+
+    gateway_models = client.get("/v1/models", headers={"Authorization": f"Bearer {api_key}"})
+    assert gateway_models.status_code == 200
+    assert gateway_models.json()["object"] == "list"
+    assert gateway_models.json()["data"] == [
+        {"id": "demo-active", "object": "model", "owned_by": "vovoapi"}
+    ]

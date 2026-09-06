@@ -5,6 +5,7 @@ const routes = [
   { href: "/register", label: "注册" },
   { href: "/dashboard", label: "控制台" },
   { href: "/account", label: "我的账户" },
+  { href: "/models", label: "模型与接入" },
   { href: "/api-key", label: "API Key" },
   { href: "/billing", label: "账单" },
   { href: "/history", label: "调用记录" },
