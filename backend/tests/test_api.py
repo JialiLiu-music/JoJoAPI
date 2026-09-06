@@ -238,3 +238,11 @@ def test_platform_model_prices_and_gateway_models(client: TestClient):
     assert gateway_models.json()["data"] == [
         {"id": "demo-active", "object": "model", "owned_by": "vovoapi"}
     ]
+
+
+def test_platform_limits_endpoint(client: TestClient):
+    limits = client.get("/api/v1/platform/limits")
+    assert limits.status_code == 200
+    assert limits.json()["rate_limit_per_minute"] > 0
+    assert limits.json()["rate_limit_window_seconds"] == 60
+    assert limits.json()["scope"] == "per-api-key"

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
 import { apiRequest } from "../../lib/api";
@@ -46,6 +47,14 @@ export default function ModelsPage() {
               <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">
                 这里展示当前可用模型和统一计费标准。接入时只需要一个 API Key 和一个 OpenAI 兼容请求地址。
               </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href="/docs/sdk" className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-300">
+                  查看 SDK 示例
+                </Link>
+                <Link href="/pricing" className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 hover:border-cyan-400/50">
+                  查看套餐定价
+                </Link>
+              </div>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-right">
               <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Available</p>
