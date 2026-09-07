@@ -26,7 +26,7 @@ function SessionPendingState({ label }: { label: string }) {
   return (
     <main className="flex min-h-screen items-center justify-center bg-slate-950 px-6 text-slate-50">
       <div className="w-full max-w-md rounded-3xl border border-slate-800 bg-slate-900/80 px-6 py-8 text-center shadow-2xl shadow-slate-950/60">
-        <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">AI Gateway</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">JoJoapi</p>
         <p className="mt-4 text-lg font-medium text-white">{label}</p>
         <p className="mt-2 text-sm text-slate-400">系统正在确认当前登录状态。</p>
       </div>

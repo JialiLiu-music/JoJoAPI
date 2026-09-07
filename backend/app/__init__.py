@@ -1,1 +1,1 @@
-"""AI Gateway backend package."""
+"""JoJoapi backend package."""

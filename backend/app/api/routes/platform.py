@@ -13,7 +13,7 @@ router = APIRouter(prefix="/platform", tags=["platform"])
 def platform_info() -> dict[str, str | list[str]]:
     return {
         "status": "ready",
-        "name": "AI Gateway",
+        "name": "JoJoapi",
         "version": "0.1.0",
         "capabilities": ["auth", "api-key", "billing", "usage", "gateway", "admin", "models", "pricing"],
     }

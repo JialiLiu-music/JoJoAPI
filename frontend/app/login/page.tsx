@@ -30,7 +30,7 @@ export default function LoginPage() {
   return (
     <main className="flex min-h-screen items-center justify-center px-6 py-12">
       <section className="w-full max-w-md rounded-3xl border border-slate-800 bg-slate-900/80 p-8 shadow-2xl shadow-slate-950/50">
-        <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">AI Gateway</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">JoJoapi</p>
         <h1 className="mt-4 text-3xl font-semibold text-white">登录账户</h1>
         <p className="mt-2 text-sm text-slate-400">登录后管理 API Key、余额和调用记录。</p>
         <form className="mt-8 space-y-4" onSubmit={handleSubmit}>

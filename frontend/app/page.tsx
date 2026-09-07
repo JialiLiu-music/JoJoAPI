@@ -21,7 +21,7 @@ export default function HomePage() {
       <section className="grid gap-10 rounded-3xl border border-slate-800 bg-slate-950/70 p-10 shadow-2xl shadow-slate-950/60 backdrop-blur">
         <div className="max-w-3xl space-y-6">
           <span className="inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300">
-            AI Gateway Platform
+            JoJoapi Platform
           </span>
           <h1 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
             商业化 AI API 中转平台

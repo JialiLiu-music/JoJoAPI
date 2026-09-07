@@ -29,7 +29,7 @@ export function AppShell({
       <div className="mx-auto flex w-full max-w-7xl gap-6 px-6 py-8">
         <aside className="hidden w-64 shrink-0 rounded-3xl border border-slate-800 bg-slate-900/70 p-5 lg:block">
           <Link href="/" className="text-xl font-bold tracking-tight">
-            AI Gateway
+            JoJoapi
           </Link>
           <nav className="mt-8 space-y-2">
             {navItems.map(([label, href]) => (

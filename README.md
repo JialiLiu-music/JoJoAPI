@@ -1,4 +1,4 @@
-# AI Gateway
+# JoJoapi
 
 商业化 AI API 中转平台。
 

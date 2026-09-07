@@ -55,7 +55,7 @@ export function DocsShell({
         <header className="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-slate-800 bg-slate-900/70 px-6 py-4 backdrop-blur">
           <div>
             <Link href="/" className="text-lg font-bold tracking-tight text-white">
-              AI Gateway
+              JoJoapi
             </Link>
             <p className="mt-1 text-xs uppercase tracking-[0.3em] text-cyan-300">Commercial Docs</p>
           </div>

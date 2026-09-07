@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'AI Gateway',
+  title: 'JoJoapi',
   description: 'Commercial AI API gateway platform',
 };
 

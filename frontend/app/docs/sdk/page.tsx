@@ -32,7 +32,7 @@ async function main() {
     model: "__MODEL__",
     messages: [
       { role: "system", content: "你是一个严谨的助手。" },
-      { role: "user", content: "请用三句话解释 AI Gateway 的价值。" },
+      { role: "user", content: "请用三句话解释 JoJoapi 的价值。" },
     ],
     temperature: 0.2,
   });
